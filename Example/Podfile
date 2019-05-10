@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'QuickTransition_Example' do
+  pod 'QuickTransition', :path => '../'
+  pod 'Masonry'
+
+  target 'QuickTransition_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

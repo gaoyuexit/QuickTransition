@@ -1,0 +1,28 @@
+PODS:
+  - Masonry (1.1.0)
+  - QuickTransition (0.1.3):
+    - QuickTransition/Alert (= 0.1.3)
+    - QuickTransition/Core (= 0.1.3)
+  - QuickTransition/Alert (0.1.3):
+    - QuickTransition/Core
+  - QuickTransition/Core (0.1.3)
+
+DEPENDENCIES:
+  - Masonry
+  - QuickTransition (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+
+EXTERNAL SOURCES:
+  QuickTransition:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  QuickTransition: 2ed9599d08400bb054414bcd6e1a73dc07cdd9e0
+
+PODFILE CHECKSUM: f0e6ec50a6e75a665fca1eab1748882fedf6c7da
+
+COCOAPODS: 1.5.3

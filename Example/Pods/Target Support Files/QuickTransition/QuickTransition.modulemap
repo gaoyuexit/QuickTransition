@@ -1,0 +1,6 @@
+framework module QuickTransition {
+  umbrella header "QuickTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}
