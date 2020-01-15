@@ -1,5 +1,5 @@
 //
-//  QKAlertAnimationNextController.h
+//  QKAlertAnimationShowController.h
 //  QuickTransition_Example
 //
 //  Created by apple on 2018/8/28.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QKAlertAnimationNextController : UIViewController
+@interface QKAlertAnimationShowController : UIViewController
 
 @end

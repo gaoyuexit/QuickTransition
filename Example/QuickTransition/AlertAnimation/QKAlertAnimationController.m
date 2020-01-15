@@ -7,7 +7,8 @@
 //
 
 #import "QKAlertAnimationController.h"
-#import "QKAlertAnimationNextController.h"
+#import "QKAlertAnimationShowController.h"
+#import "QKSideViewController.h"
 
 @interface QKAlertAnimationController ()
 
@@ -17,24 +18,100 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor orangeColor];
+    
+    __weak typeof(self) weakSelf = self;
+    [self updateRows:@[
+        
+        [QKTableRow rowTitle:@"alpha + noTapDissmiss" rowClick:^(NSInteger line) {
+            [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.alpha(0);
+                animator.tapMaskDissmiss = NO;
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"alpha + tapDissmiss" rowClick:^(NSInteger line) {
+            [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.alpha(0);
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"alpha + tapDissmiss + customBgColor" rowClick:^(NSInteger line) {
+            [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.alpha(0);
+                animator.mask = [QKColorMask maskWithColor:[UIColor orangeColor] alpha:1.0];
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"alpha + tapDissmiss + BlurEffectMask" rowClick:^(NSInteger line) {
+            [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.alpha(0);
+                animator.mask = [QKBlurEffectMask maskWithBlurEffect:UIBlurEffectStyleExtraLight alpha:0.5];
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"alpha + angle + tapDissmiss + BlurEffectMask" rowClick:^(NSInteger line) {
+            [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.alpha(0).angle(360);
+                animator.mask = [QKBlurEffectMask maskWithBlurEffect:UIBlurEffectStyleExtraLight alpha:0.5];
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"alpha + angle + scale + tapDissmiss + BlurEffectMask" rowClick:^(NSInteger line) {
+            [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.alpha(0).angle(360);
+                animator.end = QKAnimation.qk.scale(0.3);
+                animator.mask = [QKBlurEffectMask maskWithBlurEffect:UIBlurEffectStyleExtraLight alpha:0.5];
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"transtion + tapDissmiss + BlurEffectMask" rowClick:^(NSInteger line) {
+            [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.transition(0,-400);
+                animator.end = QKAnimation.qk.transition(0,400);
+                animator.mask = [QKBlurEffectMask maskWithBlurEffect:UIBlurEffectStyleExtraLight alpha:0.7];
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"transtion + tapDissmiss + BlurEffectMask" rowClick:^(NSInteger line) {
+            [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.transition(300,-400).angle(360);
+                animator.end = QKAnimation.qk.transition(-300,400);
+                animator.mask = [QKBlurEffectMask maskWithBlurEffect:UIBlurEffectStyleExtraLight alpha:0.7];
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"left - slideVC" rowClick:^(NSInteger line) {
+            [weakSelf pushSlideVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.transition([QKSideViewController sliderWidth], 0);
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"left - slideVC - presentingChange" rowClick:^(NSInteger line) {
+            [weakSelf pushSlideVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.transition([QKSideViewController sliderWidth], 0);
+                animator.presentingChange = QKAnimation.qk.scale(0.95);
+            }];
+        }]
+    ]];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    QKAlertAnimationNextController *vc = [[QKAlertAnimationNextController alloc] init];
-    QKAlertAnimator *alert = [[QKAlertAnimator alloc] init];
-    alert.start = QKAnimation.qk.alpha(0).angle(100);
-    alert.end = QKAnimation.qk.transition(-300, -300);
-    //alert.tapMaskDissmiss = NO;
-    alert.mask = [QKBlurEffectMask maskWithBlurEffect:UIBlurEffectStyleExtraLight alpha:0.5];
-//    alert.presentingChange = QKAnimation.qk.scale(0.8);
-    vc.qk_animator = alert;
+- (void)pushAlertVCWithAnimator:(void(^)(QKAlertAnimator *animator))animatorBlock
+{
+    QKAlertAnimationShowController *vc = [[QKAlertAnimationShowController alloc] init];
+    QKAlertAnimator *animator = [[QKAlertAnimator alloc] init];
+    animatorBlock(animator);
+    vc.qk_animator = animator;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)dealloc {
-    NSLog(@"----- %@ dealloc ------", self);
+- (void)pushSlideVCWithAnimator:(void(^)(QKAlertAnimator *animator))animatorBlock
+{
+    QKSideViewController *vc = [[QKSideViewController alloc] init];
+    QKAlertAnimator *animator = [[QKAlertAnimator alloc] init];
+    animatorBlock(animator);
+    vc.qk_animator = animator;
+    [self presentViewController:vc animated:YES completion:nil];
 }
+
 
 @end

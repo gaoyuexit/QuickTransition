@@ -11,7 +11,7 @@
 		181AD1F12135374700A65F90 /* QKCardAnimationNextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AD1F02135374700A65F90 /* QKCardAnimationNextController.m */; };
 		181AD1F421353F4600A65F90 /* QKCardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AD1F321353F4600A65F90 /* QKCardAnimator.m */; };
 		181AD1FF21354FFC00A65F90 /* QKAlertAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AD1FE21354FFC00A65F90 /* QKAlertAnimationController.m */; };
-		181AD205213551CA00A65F90 /* QKAlertAnimationNextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AD204213551CA00A65F90 /* QKAlertAnimationNextController.m */; };
+		181AD205213551CA00A65F90 /* QKAlertAnimationShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AD204213551CA00A65F90 /* QKAlertAnimationShowController.m */; };
 		510631BDF16C0FCBE26DFF1A /* Pods_QuickTransition_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A2F2A0D4C01550E92F10CE /* Pods_QuickTransition_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -28,6 +28,8 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7252DEDEB2047BF30035F67A /* Pods_QuickTransition_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874F4345E91F551707C529AA /* Pods_QuickTransition_Example.framework */; };
+		730A9E7B23CEEFCF00CF0F36 /* QKSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730A9E7A23CEEFCF00CF0F36 /* QKSideViewController.m */; };
+		739FF6FD23CC543B00A25E40 /* QKBaseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739FF6FC23CC543B00A25E40 /* QKBaseTableController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +52,8 @@
 		181AD1F321353F4600A65F90 /* QKCardAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKCardAnimator.m; sourceTree = "<group>"; };
 		181AD1FD21354FFC00A65F90 /* QKAlertAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKAlertAnimationController.h; sourceTree = "<group>"; };
 		181AD1FE21354FFC00A65F90 /* QKAlertAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKAlertAnimationController.m; sourceTree = "<group>"; };
-		181AD203213551CA00A65F90 /* QKAlertAnimationNextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKAlertAnimationNextController.h; sourceTree = "<group>"; };
-		181AD204213551CA00A65F90 /* QKAlertAnimationNextController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKAlertAnimationNextController.m; sourceTree = "<group>"; };
+		181AD203213551CA00A65F90 /* QKAlertAnimationShowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKAlertAnimationShowController.h; sourceTree = "<group>"; };
+		181AD204213551CA00A65F90 /* QKAlertAnimationShowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKAlertAnimationShowController.m; sourceTree = "<group>"; };
 		2CD6B09C5F8F367E142EE032 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		30B37C817022B13808AE5350 /* QuickTransition.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = QuickTransition.podspec; path = ../QuickTransition.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		360186E00AFBBD88B67C3DC1 /* Pods-QuickTransition_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTransition_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickTransition_Tests/Pods-QuickTransition_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,10 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		730A9E7923CEEFCF00CF0F36 /* QKSideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKSideViewController.h; sourceTree = "<group>"; };
+		730A9E7A23CEEFCF00CF0F36 /* QKSideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKSideViewController.m; sourceTree = "<group>"; };
+		739FF6FB23CC543B00A25E40 /* QKBaseTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKBaseTableController.h; sourceTree = "<group>"; };
+		739FF6FC23CC543B00A25E40 /* QKBaseTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKBaseTableController.m; sourceTree = "<group>"; };
 		744C21CFFEBB50064095385B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		874F4345E91F551707C529AA /* Pods_QuickTransition_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickTransition_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,8 +134,10 @@
 			children = (
 				181AD1FD21354FFC00A65F90 /* QKAlertAnimationController.h */,
 				181AD1FE21354FFC00A65F90 /* QKAlertAnimationController.m */,
-				181AD203213551CA00A65F90 /* QKAlertAnimationNextController.h */,
-				181AD204213551CA00A65F90 /* QKAlertAnimationNextController.m */,
+				181AD203213551CA00A65F90 /* QKAlertAnimationShowController.h */,
+				181AD204213551CA00A65F90 /* QKAlertAnimationShowController.m */,
+				730A9E7923CEEFCF00CF0F36 /* QKSideViewController.h */,
+				730A9E7A23CEEFCF00CF0F36 /* QKSideViewController.m */,
 			);
 			path = AlertAnimation;
 			sourceTree = "<group>";
@@ -183,9 +191,11 @@
 				181AD1DE2135257100A65F90 /* CardAnimation */,
 				6003F59C195388D20070C39A /* QKAppDelegate.h */,
 				6003F59D195388D20070C39A /* QKAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* QKViewController.h */,
 				6003F5A6195388D20070C39A /* QKViewController.m */,
+				739FF6FB23CC543B00A25E40 /* QKBaseTableController.h */,
+				739FF6FC23CC543B00A25E40 /* QKBaseTableController.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -309,6 +319,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -412,10 +423,12 @@
 				181AD1F421353F4600A65F90 /* QKCardAnimator.m in Sources */,
 				181AD1E12135259500A65F90 /* QKCardAnimationController.m in Sources */,
 				181AD1FF21354FFC00A65F90 /* QKAlertAnimationController.m in Sources */,
+				730A9E7B23CEEFCF00CF0F36 /* QKSideViewController.m in Sources */,
 				181AD1F12135374700A65F90 /* QKCardAnimationNextController.m in Sources */,
 				6003F59E195388D20070C39A /* QKAppDelegate.m in Sources */,
+				739FF6FD23CC543B00A25E40 /* QKBaseTableController.m in Sources */,
 				6003F5A7195388D20070C39A /* QKViewController.m in Sources */,
-				181AD205213551CA00A65F90 /* QKAlertAnimationNextController.m in Sources */,
+				181AD205213551CA00A65F90 /* QKAlertAnimationShowController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

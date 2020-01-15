@@ -1,36 +1,47 @@
 //
-//  QKAlertAnimationNextController.m
+//  QKAlertAnimationShowController.m
 //  QuickTransition_Example
 //
 //  Created by apple on 2018/8/28.
 //  Copyright © 2018年 gaoyu. All rights reserved.
 //
 
-#import "QKAlertAnimationNextController.h"
+#import "QKAlertAnimationShowController.h"
 
-@interface QKAlertAnimationNextController () <QKPresentedViewZoneProtocol>
-
+@interface QKAlertAnimationShowController () <QKPresentedViewZoneProtocol>
 @property (nonatomic, strong) UILabel *tipLabel;
+@property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) UILabel *discrpteLabel;
-
 @end
 
-@implementation QKAlertAnimationNextController
-
+@implementation QKAlertAnimationShowController
 
 - (CGSize)presentedViewSize {
-    return CGSizeMake(200, 200);
+    return CGSizeMake(250, 180);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
+    self.view.layer.cornerRadius = 6.0;
+    self.view.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.view.layer.shadowOffset = CGSizeZero;
+    self.view.layer.shadowRadius = 2.0;
+    self.view.layer.shadowOpacity = 1.0;
+    
     [self.view addSubview:self.tipLabel];
+    [self.view addSubview:self.closeButton];
     [self.view addSubview:self.discrpteLabel];
     
     [self.tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.top.mas_equalTo(15);
+    }];
+    
+    [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(@-15);
+        make.centerY.equalTo(self.tipLabel);
     }];
     
     [self.discrpteLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -62,11 +73,19 @@
     return _discrpteLabel;
 }
 
-
-
-- (void)dealloc {
-    NSLog(@"----- %@ dealloc ------", self);
+- (UIButton *)closeButton
+{
+    if (!_closeButton) {
+        _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_closeButton setImage:[UIImage imageNamed:@"icon_close"] forState:UIControlStateNormal];
+        [_closeButton addTarget:self action:@selector(closeButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _closeButton;
 }
 
+- (void)closeButtonClick:(UIButton *)button
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

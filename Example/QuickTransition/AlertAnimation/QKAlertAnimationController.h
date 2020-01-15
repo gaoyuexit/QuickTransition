@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QKBaseTableController.h"
 
-@interface QKAlertAnimationController : UIViewController
+@interface QKAlertAnimationController : QKBaseTableController
 
 @end
