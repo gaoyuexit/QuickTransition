@@ -29,6 +29,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7252DEDEB2047BF30035F67A /* Pods_QuickTransition_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874F4345E91F551707C529AA /* Pods_QuickTransition_Example.framework */; };
 		730A9E7B23CEEFCF00CF0F36 /* QKSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730A9E7A23CEEFCF00CF0F36 /* QKSideViewController.m */; };
+		730A9E7E23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730A9E7D23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m */; };
 		739FF6FD23CC543B00A25E40 /* QKBaseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739FF6FC23CC543B00A25E40 /* QKBaseTableController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,8 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		730A9E7923CEEFCF00CF0F36 /* QKSideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKSideViewController.h; sourceTree = "<group>"; };
 		730A9E7A23CEEFCF00CF0F36 /* QKSideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKSideViewController.m; sourceTree = "<group>"; };
+		730A9E7C23CEFD3400CF0F36 /* QKAutoLayoutAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKAutoLayoutAlertController.h; sourceTree = "<group>"; };
+		730A9E7D23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKAutoLayoutAlertController.m; sourceTree = "<group>"; };
 		739FF6FB23CC543B00A25E40 /* QKBaseTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKBaseTableController.h; sourceTree = "<group>"; };
 		739FF6FC23CC543B00A25E40 /* QKBaseTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKBaseTableController.m; sourceTree = "<group>"; };
 		744C21CFFEBB50064095385B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				181AD204213551CA00A65F90 /* QKAlertAnimationShowController.m */,
 				730A9E7923CEEFCF00CF0F36 /* QKSideViewController.h */,
 				730A9E7A23CEEFCF00CF0F36 /* QKSideViewController.m */,
+				730A9E7C23CEFD3400CF0F36 /* QKAutoLayoutAlertController.h */,
+				730A9E7D23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m */,
 			);
 			path = AlertAnimation;
 			sourceTree = "<group>";
@@ -307,7 +312,7 @@
 				ORGANIZATIONNAME = gaoyu;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 4XGNFW3D8N;
+						DevelopmentTeam = 85V85SA9UV;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -399,7 +404,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-QuickTransition_Example/Pods-QuickTransition_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-QuickTransition_Example/Pods-QuickTransition_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/QuickTransition/QuickTransition.framework",
 			);
@@ -410,7 +415,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickTransition_Example/Pods-QuickTransition_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickTransition_Example/Pods-QuickTransition_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -420,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				730A9E7E23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m in Sources */,
 				181AD1F421353F4600A65F90 /* QKCardAnimator.m in Sources */,
 				181AD1E12135259500A65F90 /* QKCardAnimationController.m in Sources */,
 				181AD1FF21354FFC00A65F90 /* QKAlertAnimationController.m in Sources */,
@@ -557,7 +563,7 @@
 			baseConfigurationReference = CFB489652DA075C9082A2104 /* Pods-QuickTransition_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4XGNFW3D8N;
+				DEVELOPMENT_TEAM = 85V85SA9UV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickTransition/QuickTransition-Prefix.pch";
 				INFOPLIST_FILE = "QuickTransition/QuickTransition-Info.plist";

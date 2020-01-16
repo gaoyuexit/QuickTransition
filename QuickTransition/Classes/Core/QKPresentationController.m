@@ -23,11 +23,22 @@
         
         if([self.presentedViewController respondsToSelector:@selector(presentedViewSize)]) {
             CGSize size = [((id<QKPresentedViewZoneProtocol>)(self.presentedViewController)) presentedViewSize];
-            return CGRectMake((UIScreen.mainScreen.bounds.size.width - size.width) * 0.5, (UIScreen.mainScreen.bounds.size.height - size.height) * 0.5, size.width, size.height);
+            return CGRectMake((UIScreen.mainScreen.bounds.size.width - size.width) * 0.5,
+                              (UIScreen.mainScreen.bounds.size.height - size.height) * 0.5,
+                              size.width,
+                              size.height);
         }
+        
         if([self.presentedViewController respondsToSelector:@selector(presentedViewFrame)]) {
             return [((id<QKPresentedViewZoneProtocol>)(self.presentedViewController)) presentedViewFrame];
         }
+        
+        CGSize size = [self.presentedViewController.view systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        self.presentedViewController.view.translatesAutoresizingMaskIntoConstraints = YES;
+        return CGRectMake((UIScreen.mainScreen.bounds.size.width - size.width) * 0.5,
+                          (UIScreen.mainScreen.bounds.size.height - size.height) * 0.5,
+                          size.width,
+                          size.height);
     }
     return [super frameOfPresentedViewInContainerView];
 }

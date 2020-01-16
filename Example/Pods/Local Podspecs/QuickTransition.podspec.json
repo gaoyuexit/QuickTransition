@@ -1,6 +1,6 @@
 {
   "name": "QuickTransition",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "summary": "Quick and easy transition animation.",
   "description": "This is a convenient and fast transition animation for users.",
   "homepage": "https://git.zhugefang.com/iOS/QuickTransition",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "git@git.zhugefang.com:iOS/QuickTransition.git",
-    "tag": "0.1.3"
+    "tag": "0.1.5"
   },
   "social_media_url": "http://gaoyu.in",
   "platforms": {
