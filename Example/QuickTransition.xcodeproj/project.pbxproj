@@ -30,6 +30,11 @@
 		7252DEDEB2047BF30035F67A /* Pods_QuickTransition_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874F4345E91F551707C529AA /* Pods_QuickTransition_Example.framework */; };
 		730A9E7B23CEEFCF00CF0F36 /* QKSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730A9E7A23CEEFCF00CF0F36 /* QKSideViewController.m */; };
 		730A9E7E23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730A9E7D23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m */; };
+		7352FFCB23D16739000346FD /* QKCustomMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7352FFCA23D16739000346FD /* QKCustomMask.m */; };
+		7398105823D00D9800ACA768 /* QKCustomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7398105723D00D9800ACA768 /* QKCustomAnimationController.m */; };
+		7398105B23D00E1500ACA768 /* QKShopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7398105A23D00E1500ACA768 /* QKShopAnimator.m */; };
+		7398105F23D00FB000ACA768 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7398105E23D00FB000ACA768 /* UIView+Additions.m */; };
+		7398106223D0160800ACA768 /* QKShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7398106123D0160800ACA768 /* QKShoppingViewController.m */; };
 		739FF6FD23CC543B00A25E40 /* QKBaseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739FF6FC23CC543B00A25E40 /* QKBaseTableController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -83,6 +88,16 @@
 		730A9E7A23CEEFCF00CF0F36 /* QKSideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKSideViewController.m; sourceTree = "<group>"; };
 		730A9E7C23CEFD3400CF0F36 /* QKAutoLayoutAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKAutoLayoutAlertController.h; sourceTree = "<group>"; };
 		730A9E7D23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKAutoLayoutAlertController.m; sourceTree = "<group>"; };
+		7352FFC923D16739000346FD /* QKCustomMask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKCustomMask.h; sourceTree = "<group>"; };
+		7352FFCA23D16739000346FD /* QKCustomMask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKCustomMask.m; sourceTree = "<group>"; };
+		7398105623D00D9800ACA768 /* QKCustomAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKCustomAnimationController.h; sourceTree = "<group>"; };
+		7398105723D00D9800ACA768 /* QKCustomAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKCustomAnimationController.m; sourceTree = "<group>"; };
+		7398105923D00E1500ACA768 /* QKShopAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKShopAnimator.h; sourceTree = "<group>"; };
+		7398105A23D00E1500ACA768 /* QKShopAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKShopAnimator.m; sourceTree = "<group>"; };
+		7398105D23D00FB000ACA768 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		7398105E23D00FB000ACA768 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		7398106023D0160800ACA768 /* QKShoppingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKShoppingViewController.h; sourceTree = "<group>"; };
+		7398106123D0160800ACA768 /* QKShoppingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKShoppingViewController.m; sourceTree = "<group>"; };
 		739FF6FB23CC543B00A25E40 /* QKBaseTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKBaseTableController.h; sourceTree = "<group>"; };
 		739FF6FC23CC543B00A25E40 /* QKBaseTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKBaseTableController.m; sourceTree = "<group>"; };
 		744C21CFFEBB50064095385B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -143,15 +158,10 @@
 				730A9E7A23CEEFCF00CF0F36 /* QKSideViewController.m */,
 				730A9E7C23CEFD3400CF0F36 /* QKAutoLayoutAlertController.h */,
 				730A9E7D23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m */,
+				7352FFC923D16739000346FD /* QKCustomMask.h */,
+				7352FFCA23D16739000346FD /* QKCustomMask.m */,
 			);
 			path = AlertAnimation;
-			sourceTree = "<group>";
-		};
-		181AD1FC21354FC100A65F90 /* PullAnimation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PullAnimation;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -191,15 +201,14 @@
 		6003F593195388D20070C39A /* Example for QuickTransition */ = {
 			isa = PBXGroup;
 			children = (
-				181AD1FC21354FC100A65F90 /* PullAnimation */,
+				7398105C23D00FA000ACA768 /* Helper */,
+				7398105523D00D6400ACA768 /* CustomAnimation */,
 				181AD1FB21354F8500A65F90 /* AlertAnimation */,
 				181AD1DE2135257100A65F90 /* CardAnimation */,
 				6003F59C195388D20070C39A /* QKAppDelegate.h */,
 				6003F59D195388D20070C39A /* QKAppDelegate.m */,
 				6003F5A5195388D20070C39A /* QKViewController.h */,
 				6003F5A6195388D20070C39A /* QKViewController.m */,
-				739FF6FB23CC543B00A25E40 /* QKBaseTableController.h */,
-				739FF6FC23CC543B00A25E40 /* QKBaseTableController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -247,6 +256,30 @@
 				744C21CFFEBB50064095385B /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		7398105523D00D6400ACA768 /* CustomAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				7398105623D00D9800ACA768 /* QKCustomAnimationController.h */,
+				7398105723D00D9800ACA768 /* QKCustomAnimationController.m */,
+				7398105923D00E1500ACA768 /* QKShopAnimator.h */,
+				7398105A23D00E1500ACA768 /* QKShopAnimator.m */,
+				7398106023D0160800ACA768 /* QKShoppingViewController.h */,
+				7398106123D0160800ACA768 /* QKShoppingViewController.m */,
+			);
+			path = CustomAnimation;
+			sourceTree = "<group>";
+		};
+		7398105C23D00FA000ACA768 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				739FF6FB23CC543B00A25E40 /* QKBaseTableController.h */,
+				739FF6FC23CC543B00A25E40 /* QKBaseTableController.m */,
+				7398105D23D00FB000ACA768 /* UIView+Additions.h */,
+				7398105E23D00FB000ACA768 /* UIView+Additions.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		94F93CC4DF3954C70916C8B1 /* Pods */ = {
@@ -426,15 +459,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				730A9E7E23CEFD3400CF0F36 /* QKAutoLayoutAlertController.m in Sources */,
+				7398105B23D00E1500ACA768 /* QKShopAnimator.m in Sources */,
 				181AD1F421353F4600A65F90 /* QKCardAnimator.m in Sources */,
 				181AD1E12135259500A65F90 /* QKCardAnimationController.m in Sources */,
 				181AD1FF21354FFC00A65F90 /* QKAlertAnimationController.m in Sources */,
 				730A9E7B23CEEFCF00CF0F36 /* QKSideViewController.m in Sources */,
+				7398106223D0160800ACA768 /* QKShoppingViewController.m in Sources */,
 				181AD1F12135374700A65F90 /* QKCardAnimationNextController.m in Sources */,
 				6003F59E195388D20070C39A /* QKAppDelegate.m in Sources */,
+				7398105823D00D9800ACA768 /* QKCustomAnimationController.m in Sources */,
 				739FF6FD23CC543B00A25E40 /* QKBaseTableController.m in Sources */,
+				7352FFCB23D16739000346FD /* QKCustomMask.m in Sources */,
 				6003F5A7195388D20070C39A /* QKViewController.m in Sources */,
 				181AD205213551CA00A65F90 /* QKAlertAnimationShowController.m in Sources */,
+				7398105F23D00FB000ACA768 /* UIView+Additions.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

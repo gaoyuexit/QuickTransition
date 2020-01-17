@@ -59,6 +59,7 @@
         _dataSource = @[
                         @{@"title": @"CardAnimation", @"vc": @"QKCardAnimationController"},
                         @{@"title": @"AlertAnimation", @"vc": @"QKAlertAnimationController"},
+                        @{@"title": @"CustomAnimation", @"vc": @"QKCustomAnimationController"},
                         ];
     }
     return _dataSource;

@@ -10,6 +10,7 @@
 #import "QKAlertAnimationShowController.h"
 #import "QKSideViewController.h"
 #import "QKAutoLayoutAlertController.h"
+#import "QKCustomMask.h"
 
 @interface QKAlertAnimationController ()
 
@@ -40,6 +41,13 @@
             [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
                 animator.start = QKAnimation.qk.alpha(0);
                 animator.mask = [QKColorMask maskWithColor:[UIColor orangeColor] alpha:1.0];
+            }];
+        }],
+        
+        [QKTableRow rowTitle:@"alpha + tapDissmiss + custombgView" rowClick:^(NSInteger line) {
+            [weakSelf pushAlertVCWithAnimator:^(QKAlertAnimator *animator) {
+                animator.start = QKAnimation.qk.alpha(0);
+                animator.mask = [[QKCustomMask alloc] init];
             }];
         }],
         
