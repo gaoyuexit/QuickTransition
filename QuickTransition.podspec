@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QuickTransition'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Quick and easy transition animation.'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ This is a convenient and fast transition animation for users.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'gaoyu' => 'gaoyuexit@gmail.com' }
-  s.source           = { :git => 'git@github.com:gaoyuexit/QuickTransition.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/gaoyuexit/QuickTransition.git', :tag => s.version.to_s }
   s.social_media_url = 'http://gaoyu.in'
   s.ios.deployment_target = '8.0'
 
